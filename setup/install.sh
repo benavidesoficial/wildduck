@@ -657,7 +657,6 @@ chmod +x /usr/local/bin/reload-services.sh
 
 # update reload script for future updates
 echo "#!/bin/bash
-$SYSTEMCTL_PATH reload nginx
 $SYSTEMCTL_PATH reload wildduck
 $SYSTEMCTL_PATH restart zone-mta
 $SYSTEMCTL_PATH restart haraka
@@ -671,7 +670,7 @@ $SYSTEMCTL_PATH start wildduck
 $SYSTEMCTL_PATH start haraka
 $SYSTEMCTL_PATH start zone-mta
 $SYSTEMCTL_PATH start wildduck-webmail
-$SYSTEMCTL_PATH reload nginx
+# $SYSTEMCTL_PATH reload nginx
 
 cd "$INSTALLDIR"
 
